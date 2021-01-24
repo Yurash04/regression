@@ -1,0 +1,277 @@
+/*******************************
+Resetting Styles
+********************************/
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*******************************
+Main styles
+********************************/
+
+/********************************
+Colors
+*********************************/
+
+/* 
+#FFFFFF
+#E5E5E5
+#FCA311
+#14213D
+#000000 
+*/
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #e9e7e7, #8f8c8c);
+  margin: 2% 3%;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+section {
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 34px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  width: 14%;
+  margin: 1%;
+}
+
+input {
+  width: 160px;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-width: 1px;
+}
+
+.input {
+  margin: 5px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.button:link,
+.button:visited {
+  display: inline-block;
+  text-align: center;
+  padding: 7px 50px;
+  color: #434343;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #14213db0;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.button:hover,
+.button:active {
+  color: white;
+  background-color: #14213db0;
+}
+
+table {
+  width: 78%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px;
+}
+
+table td {
+  border: 1px solid black;
+}
+
+.box {
+  /*border: 1px solid #555;*/
+
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.box span {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-bottom: 1px solid #2612ba;
+  border-right: 1px solid #2612ba;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  animation: animate 2s infinite;
+  -webkit-animation: animate 2s infinite;
+}
+
+.box span:nth-child(2) {
+  animation-delay: -0.2s;
+  transform: rotate(45deg) translate(-20px, -20px);
+  -webkit-transform: rotate(45deg) translate(-20px, -20px);
+  -moz-transform: rotate(45deg) translate(-20px, -20px);
+  -ms-transform: rotate(45deg) translate(-20px, -20px);
+  -o-transform: rotate(45deg) translate(-20px, -20px);
+}
+
+.box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+    -webkit-transform: rotate(45deg) translate(-20px, -20px);
+    -moz-transform: rotate(45deg) translate(-20px, -20px);
+    -ms-transform: rotate(45deg) translate(-20px, -20px);
+    -o-transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+    -webkit-transform: rotate(45deg) translate(20px, 20px);
+    -moz-transform: rotate(45deg) translate(20px, 20px);
+    -ms-transform: rotate(45deg) translate(20px, 20px);
+    -o-transform: rotate(45deg) translate(20px, 20px);
+  }
+}

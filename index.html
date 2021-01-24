@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регрессия</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="inputs">
+      <h1>Модель множественной регрессии</h1>
+      <div class="container">
+        <div class="middle-container">
+          <div class="input">
+            <input
+              type="number"
+              name="revenue0"
+              id="revenue1"
+              placeholder="1 000 000"
+            />
+            <label for="revenue0">Выручка, тыс. руб</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x11" placeholder="1.0" />
+            <label for="x1">Коэффициент 1</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x12" placeholder="2.0" />
+            <label for="x2">Коэффициент 2</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x13" placeholder="3.0" />
+            <label for="x3">Коэффициент 3</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x14" placeholder="4.0" />
+            <label for="x4">Коэффициент 4</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x15" placeholder="5.0" />
+            <label for="x5">Коэффициент 5</label>
+          </div>
+        </div>
+
+        <div class="middle-container">
+          <div class="input">
+            <input type="number" id="revenue2" placeholder="1 000 000" />
+            <label for="revenue">Выручка, тыс. руб</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x21" placeholder="1.0" />
+            <label for="x1">Коэффициент 1</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x22" placeholder="2.0" />
+            <label for="x2">Коэффициент 2</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x23" placeholder="3.0" />
+            <label for="x3">Коэффициент 3</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x24" placeholder="4.0" />
+            <label for="x4">Коэффициент 4</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x25" placeholder="5.0" />
+            <label for="x5">Коэффициент 5</label>
+          </div>
+        </div>
+
+        <div class="middle-container">
+          <div class="input">
+            <input type="number" id="revenue3" placeholder="1 000 000" />
+            <label for="revenue">Выручка, тыс. руб</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x31" placeholder="1.0" />
+            <label for="x1">Коэффициент 1</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x32" placeholder="2.0" />
+            <label for="x2">Коэффициент 2</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x33" placeholder="3.0" />
+            <label for="x3">Коэффициент 3</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x34" placeholder="4.0" />
+            <label for="x4">Коэффициент 4</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x35" placeholder="5.0" />
+            <label for="x5">Коэффициент 5</label>
+          </div>
+        </div>
+
+        <div class="middle-container">
+          <div class="input">
+            <input type="number" id="revenue4" placeholder="1 000 000" />
+            <label for="revenue">Выручка, тыс. руб</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x41" placeholder="1.0" />
+            <label for="x1">Коэффициент 1</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x42" placeholder="2.0" />
+            <label for="x2">Коэффициент 2</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x43" placeholder="3.0" />
+            <label for="x3">Коэффициент 3</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x44" placeholder="4.0" />
+            <label for="x4">Коэффициент 4</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x45" placeholder="5.0" />
+            <label for="x5">Коэффициент 5</label>
+          </div>
+        </div>
+
+        <div class="middle-container">
+          <div class="input">
+            <input type="number" id="revenue5" placeholder="1 000 000" />
+            <label for="revenue">Выручка, тыс. руб</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x51" placeholder="1.0" />
+            <label for="x1">Коэффициент 1</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x52" placeholder="2.0" />
+            <label for="x2">Коэффициент 2</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x53" placeholder="3.0" />
+            <label for="x3">Коэффициент 3</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x54" placeholder="4.0" />
+            <label for="x4">Коэффициент 4</label>
+          </div>
+
+          <div class="input">
+            <input type="number" id="x55" placeholder="5.0" />
+            <label for="x5">Коэффициент 5</label>
+          </div>
+        </div>
+      </div>
+      <div class="submit">
+        <a href="#" class="button" onclick="submitData(event)"> Submit </a>
+      </div>
+      <!-- <div class="box" onclick="location.href='#';" style="cursor: pointer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="table-1">
+      <h2>Table 1</h2>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="table-2">
+      <h2>Table 2</h2>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="table-3">
+      <h2>Table 3</h2>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="table-4">
+      <h2>Table 4</h2>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>1</th>
+          <th>1</th>
+          <th>1</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
